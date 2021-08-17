@@ -1,12 +1,27 @@
-import React from 'react'
-import SingleProduct from '../Pges/SingleProduct'
+import React,{useState,useEffect} from 'react'
+import SingleProduct from '../Pges/SingleProduct';
+import Axios from 'axios';
+import {getMovie, getMovies} from "../services/pizApi" 
 
 export default function ProductPages() {
+    const[product,setProduct]=useState([]);
+    useEffect(()=>{
+        const dummyData=getMovies();
+    
+        setProduct(dummyData)
+
+       
+    },[])
     return (
         <div className="container pb-24 mx-auto">
             <h1 className="text-lg">Product</h1>
                 <div className="grid grid-cols-5 my-8 gap-24">
-                    <SingleProduct/>
+                    
+                    {
+                      product.length>0?(product.map((data)=>(<SingleProduct pizzaData={data}/>))):"No data found"
+                    }
+                    {/* <SingleProduct/>
+                    <SingleProduct/> */}
               
 
             </div>

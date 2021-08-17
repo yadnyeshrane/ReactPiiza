@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function  () {
+export default function  ({pizzaData}) {
+    console.log('produtcy', pizzaData)
     return (
         <div>
                   <img src="images/piz1.jpg"></img>
