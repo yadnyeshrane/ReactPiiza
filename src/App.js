@@ -7,6 +7,9 @@ import  Nav from './componenets/Nav'
 import Product from './Pges/Product';
 import Cart from './Pges/Cart';
 
+import SinglePro from './services/SinglePro';
+
+
 
 function App() {
   return (
@@ -18,7 +21,8 @@ function App() {
                <Route path="/" component={Homes} exact></Route>
              <Route path="/about" component={About} exact></Route>
                 <Route path="/product" component={Product}></Route>
-                  <Route path="/cart" component={Cart}></Route>
+                  <Route path="/cart" component={Cart} exact> </ Route>
+                  <Route path="/singlepro/:_id" component={SinglePro }></Route>
          </Switch>
        </Router>
        </>

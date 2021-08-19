@@ -5,6 +5,19 @@ const pizza = [
   
       price: "250",
       size: "small"
+    },  {
+      _id: "5eee651f739f8c674fd736ef",
+      name: "Macchao",
+  
+      price: "230",
+      size: "small"
+    },
+    {
+      _id: "5eee651f739f8c674fd736eg",
+      name: "Meua",
+  
+      price: "650",
+      size: "large"
     },
     {
       _id: "5eee6671a27a66807cf2bea3",
