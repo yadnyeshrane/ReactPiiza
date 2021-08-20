@@ -1,6 +1,11 @@
-import React from "react";
+import React,{useContext} from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../CartContext";
+
 export default function Nav() {
+
+  
+  const {cart}=useContext(CartContext);
   const cartStyle = {
     background: "yellow",
     display: "flex",
@@ -32,7 +37,7 @@ export default function Nav() {
           <li>
             <Link to="/cart">
               <div style={cartStyle}>
-                <span className="text-black mr-2">10</span>
+                <span className="text-black mr-2">{cart.totalItems}</span>
                 <img src="/images/cart.png" />
               </div>
             </Link>

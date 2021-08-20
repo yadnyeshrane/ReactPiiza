@@ -1,9 +1,13 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useContext} from 'react'
 import SingleProduct from '../Pges/SingleProduct';
 import Axios from 'axios';
 import {getMovie, getMovies} from "../services/pizApi" 
+import { CartContext } from '../CartContext';
+
 
 export default function ProductPages() {
+
+    const {name}=useContext(CartContext)
     const[product,setProduct]=useState([]);
     useEffect(()=>{
         const dummyData=getMovies();
